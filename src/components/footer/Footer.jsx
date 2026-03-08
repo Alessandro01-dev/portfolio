@@ -1,8 +1,8 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import classes from './Footer.module.css'
-import SendEmailIcon from '../../assets/SendEmailIcon'
 import GithubIcon from '../../assets/GithubIcon'
 import LinkedinIcon from '../../assets/LinkedinIcon'
+import DiscordIcon from '../../assets/DiscordIcon'
 
 const Footer = () => {
   return (
@@ -36,7 +36,7 @@ const Footer = () => {
             <div
               className='d-flex align-items-center justify-content-center gap-3'
             >
-              <SendEmailIcon />
+              <DiscordIcon />
               <GithubIcon />
               <LinkedinIcon />
             </div>

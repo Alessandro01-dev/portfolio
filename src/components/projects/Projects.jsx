@@ -19,18 +19,20 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "A full-featured online store with payment integration, user authentication, and admin dashboard.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      tech: ["HTML", "CSS", "Bootstrap", "JS"],
       image: ecommerce,
       github: "https://github.com/Alessandro01-dev/epicode/tree/main/M4/W4D1",
-      demo: null
+      demo: null,
+      progressMessage: "Refactoring in React"
     },
     {
       title: "Thread Blog",
       description: "A modern publishing platform designed for seamless storytelling. It features a rich-text editor, content categorization, and a personalized feed. The application focuses on clean typography and optimized reading experiences, including features like reading time estimation and social sharing integrations.",
-      tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Bootstrap"],
+      tech: ["React", "React Bootstrap", "Node.js", "Express", "MongoDB", "JWT", "OAuth"],
       image: blog,
       github: "https://github.com/Alessandro01-dev/epicode/tree/main/M6",
-      demo: "https://epicode-jet.vercel.app/"
+      demo: null,
+      progressMessage: "Deployment in progress"
     }
   ];
 
@@ -95,7 +97,7 @@ const Projects = () => {
                   </a>
                 ) : (
                   <span className="text-info small fst-italic">
-                    🚀 Deployment in progress...
+                    🚀 {project.progressMessage}...
                   </span>
                 )}
               </div>
