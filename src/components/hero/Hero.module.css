@@ -1,0 +1,74 @@
+.hero-main-container {
+  margin: 120px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: start;
+}
+
+.greeting,
+.introduction,
+.job {
+  margin: 0;
+}
+
+.greeting span,
+.job span {
+  color: var(--accent);
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-left: 120px;
+}
+
+.accent-line {
+  position: absolute;
+  height: 4px;
+  background-color: var(--accent);
+  bottom: 0.3em;
+  right: calc(100% - 100px);
+  width: 200vw;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLine 2s ease-out forwards;
+}
+
+.introduction {
+  margin: 0;
+  font-weight: 100;
+}
+
+@keyframes slideInLine {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.job {
+  padding-left: 25px;
+  text-wrap: nowrap;
+}
+
+.hero-img-container {
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 0;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (max-width: 768px) {
+  .hero-img-container {
+    width: 140px;
+  }
+}
+
