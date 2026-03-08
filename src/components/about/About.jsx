@@ -28,7 +28,7 @@ const About = () => {
             <Button
               variant="outline-light"
               className="mt-auto align-self-center align-self-md-start"
-              href="/Resume.pdf"
+              href="Resume.pdf"
               download="Alessandro_CV.pdf"
             >
               Download CV
