@@ -57,7 +57,7 @@ const Contact = () => {
   };
 
   return (
-    <Container>
+    <Container id="contact">
       <Toaster position="top-right" reverseOrder={false} />
       <Row className='py-5'>
         <Col>

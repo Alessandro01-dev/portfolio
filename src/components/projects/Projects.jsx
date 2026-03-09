@@ -37,7 +37,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-5">
+    <section id="projects" className="py-5">
       <h2 className={`${classes['section-title']} text-center mb-5 fw-bold`}>Projects</h2>
       <div className={classes['title-divider']}>
         <div className={classes['line']}></div>

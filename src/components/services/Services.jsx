@@ -25,7 +25,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-5">
+    <section id="services" className="py-5">
       <Row className="flex-column h-100 gy-4">
         {services.map((service, index) => (
           <Col xs={12} key={index} className={classes['service-card-wrapper']}>

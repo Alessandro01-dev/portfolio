@@ -1,0 +1,32 @@
+.nav-main-container {
+  background-color: var(--background-light);
+}
+
+.logo-container {
+  flex-shrink: 0;
+  max-width: 40px;
+}
+
+.nav-links {
+  font-size: 8px;
+  gap: 8px !important;
+  text-transform: uppercase;
+}
+
+@media (min-width: 425px) {
+  .nav-links {
+    font-size: 14px;
+    gap: 32px !important;
+    text-transform: none;
+  }
+}
+
+.nav-links a {
+  transition: color 0.3s ease;
+  opacity: 0.8;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: #fff !important;
+}

@@ -3,7 +3,7 @@ import classes from './About.module.css'
 
 const About = () => {
   return (
-    <section className="py-5 h-100">
+    <section id="about" className="py-5 h-100">
       <Row className="flex-column h-100">
         <Col className="m-0 text-center text-md-start h-100">
           <div
