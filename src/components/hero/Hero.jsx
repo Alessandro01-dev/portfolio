@@ -1,6 +1,7 @@
 import { Col, Row } from 'react-bootstrap'
 import classes from './Hero.module.css'
 import hero from '../../assets/hero5.png'
+import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
   return (
@@ -23,7 +24,28 @@ const Hero = () => {
           </div>
           <h1
             className={classes['job']}
-          ><span>{`<`}</span> Web Developer <span>{`/>`}</span></h1>
+          ><span>{`<`}</span> {/* <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString('Problem Solver')
+                  .pauseFor(1500)
+                  .deleteAll()
+                  .typeString('Bug Creator')
+                  .pauseFor(500)
+                  .deleteChars(7)
+                  .typeString('Fixer')
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .typeString('Web Developer')
+                  .start()
+              }}
+              options={{
+                autoStart: true,
+                loop: false,
+                wrapperClassName: classes['typewriter-wrapper'],
+                cursorClassName: classes['typewriter-cursor'],
+              }}
+            /> */} Web Developer <span>{`/>`}</span></h1>
         </div>
       </Col>
       <Col

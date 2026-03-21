@@ -1,6 +1,6 @@
 import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
 import talkmate from '../../assets/talkmate1.png'
-import ecommerce from '../../assets/ecommerce.png'
+import ecommerce from '../../assets/ecommerce2.png'
 import blog from '../../assets/threadblog.png'
 import classes from './Projects.module.css'
 import ExternalLinkIcon from '../../assets/ExternalLinkIcon';
@@ -9,21 +9,21 @@ const Projects = () => {
 
   const projectList = [
     {
+      title: "E-Commerce Platform",
+      description: "A professional online store featuring a dynamic catalog of 500 products across 50 categories. It includes advanced search by title, category-specific filtering, a persistent wishlist system, and full Stripe integration for secure payments. A dedicated admin dashboard allows for complete real-time product and inventory management.",
+      tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
+      image: ecommerce,
+      github: "https://github.com/Alessandro01-dev/e-commerce",
+      demo: null,
+      progressMessage: "Deployment in progress"
+    },
+    {
       title: "Talkmate",
       description: "Talkmate is a modern web platform connecting language students and tutors worldwide. By integrating Google Maps APIs, users can find native teachers or other users for a language exchange in their local area or specific cities, visualizing them on an interactive map.",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Google Maps API"],
+      tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Socket.io", "Google Maps API"],
       image: talkmate,
       github: "https://github.com/Alessandro01-dev/capstone_project",
       demo: "https://talkmate-flame.vercel.app"
-    },
-    {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store with payment integration, user authentication, and admin dashboard.",
-      tech: ["HTML", "CSS", "Bootstrap", "JS"],
-      image: ecommerce,
-      github: "https://github.com/Alessandro01-dev/epicode/tree/main/M4/W4D1",
-      demo: null,
-      progressMessage: "Refactoring in React"
     },
     {
       title: "Thread Blog",

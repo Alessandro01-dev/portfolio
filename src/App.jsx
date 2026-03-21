@@ -9,8 +9,16 @@ import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
+import { useEffect } from 'react';
+import ReactGA from "react-ga4";
+
+ReactGA.initialize(import.meta.env.VITE_GA_ID);
 
 const App = () => {
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
 
   return (
     <>

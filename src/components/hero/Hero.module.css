@@ -10,6 +10,7 @@
 .introduction,
 .job {
   margin: 0;
+  white-space: nowrap;
 }
 
 .greeting span,
@@ -49,11 +50,6 @@
   }
 }
 
-.job {
-  padding-left: 25px;
-  text-wrap: nowrap;
-}
-
 .hero-img-container {
   width: 240px;
   display: flex;
@@ -72,3 +68,26 @@
   }
 }
 
+.job {
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+/* .typewriter-wrapper {
+  color: white !important;
+}
+
+.typewriter-cursor {
+  color: white !important;
+  margin-left: 2px;
+  animation: typewriter-blink 1s infinite; 
+}
+
+@keyframes typewriter-blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+} */
