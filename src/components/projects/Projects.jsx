@@ -32,7 +32,7 @@ const Projects = () => {
       image: blog,
       github: "https://github.com/Alessandro01-dev/epicode/tree/main/M6",
       demo: null,
-      progressMessage: "Deployment in progress"
+      progressMessage: "System Upgrade & Deployment in progress"
     }
   ];
 
