@@ -5,8 +5,11 @@ import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
 import toast, { Toaster } from 'react-hot-toast';
 import LetsTalkIcon from '../../assets/LetsTalkIcon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const Contact = () => {
+  const { content, language } = useLanguage()
+
   const formRef = useRef();
   const recaptchaRef = useRef();
   const [validated, setValidated] = useState(false);
@@ -28,7 +31,7 @@ const Contact = () => {
     const captchaToken = recaptchaRef.current.getValue();
 
     if (f.checkValidity() === false || !captchaToken) {
-      if (!captchaToken) toast.error("Please verify you are not a robot");
+      if (!captchaToken) toast.error(content.contact.notifications.captchaError);
       e.stopPropagation();
       setValidated(true);
     } else {
@@ -41,13 +44,13 @@ const Contact = () => {
         { publicKey: import.meta.env.VITE_MAILJS_PUBLIC_KEY }
       )
         .then(() => {
-          toast.success('Message sent successfully!');
+          toast.success(content.contact.notifications.success);
           setForm({ name: '', email: '', message: '' });
           setValidated(false);
           recaptchaRef.current.reset();
         })
         .catch((error) => {
-          toast.error("Failed to send message. Please try again.");
+          toast.error(content.contact.notifications.error);
           console.error(error);
         })
         .finally(() => {
@@ -63,7 +66,7 @@ const Contact = () => {
         <Col>
           <div className={classes['section-title-container']}>
             <div className={classes['accent-line']}></div>
-            <h2 className={classes['section-title']}>Contact</h2>
+            <h2 className={classes['section-title']}>{content.contact.sectionTitle}</h2>
           </div>
         </Col>
       </Row>
@@ -71,7 +74,7 @@ const Contact = () => {
       <Row className='py-5 gy-5 align-items-stretch'>
         <Col xs={12} md={6}>
           <div className='d-flex flex-column justify-content-between align-items-center text-center text-md-start h-100'>
-            <h3 className={classes['contact-title']}>Do you have a project?</h3>
+            <h3 className={classes['contact-title']}>{content.contact.question}</h3>
             <div
               className='align-self-center'
             >
@@ -85,6 +88,7 @@ const Contact = () => {
                 ref={recaptchaRef}
                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                 theme="dark"
+                hl={language}
               />
             </div>
           </div>
@@ -93,46 +97,46 @@ const Contact = () => {
         <Col xs={12} md={6}>
           <Form className='d-flex flex-column justify-content-between' ref={formRef} noValidate validated={validated} onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>{content.contact.form.nameLabel}</Form.Label>
               <Form.Control
                 className={classes['custom-input']}
                 name="name"
                 type="text"
-                placeholder="Your Name"
+                placeholder={content.contact.form.namePlaceholder}
                 value={form.name}
                 onChange={handleInputChange}
                 required
               />
-              <Form.Control.Feedback type="invalid">Enter your name.</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">{content.contact.form.nameError}</Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Email</Form.Label>
+              <Form.Label>{content.contact.form.emailLabel}</Form.Label>
               <Form.Control
                 className={classes['custom-input']}
                 name="email"
                 type="email"
-                placeholder="Email Address"
+                placeholder={content.contact.form.emailPlaceholder}
                 value={form.email}
                 onChange={handleInputChange}
                 required
               />
-              <Form.Control.Feedback type="invalid">Enter a valid email.</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">{content.contact.form.emailError}</Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Message</Form.Label>
+              <Form.Label>{content.contact.form.messageLabel}</Form.Label>
               <Form.Control
                 className={classes['custom-input']}
                 as="textarea"
                 rows={4}
                 name="message"
-                placeholder="How can I help you?"
+                placeholder={content.contact.form.messagePlaceholder}
                 value={form.message}
                 onChange={handleInputChange}
                 required
               />
-              <Form.Control.Feedback type="invalid">Enter a short message.</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">{content.contact.form.messageError}</Form.Control.Feedback>
             </Form.Group>
 
             <Button
@@ -151,10 +155,10 @@ const Contact = () => {
                     aria-hidden="true"
                     className="me-2"
                   />
-                  Sending...
+                  {content.contact.form.sendingBtn}
                 </>
               ) : (
-                'Submit'
+                content.contact.form.submitBtn
               )}
             </Button>
           </Form>

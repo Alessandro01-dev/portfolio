@@ -3,22 +3,25 @@ import WebDevelopmentIcon from '../../assets/WebDevelopmentIcon';
 import FrontendIcon from '../../assets/FrontendIcon';
 import BackendIcon from '../../assets/BackendIcon';
 import classes from './Services.module.css'
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const Services = () => {
+  const { content } = useLanguage()
+
   const services = [
     {
-      title: "Web Development",
-      description: "Building scalable, high-performance web applications using the latest MERN stack technologies.",
+      title: content.services.webDev.title,
+      description: content.services.webDev.description,
       icon: <WebDevelopmentIcon size="80px" color="#a8a8a8" />
     },
     {
-      title: "Frontend Strategy",
-      description: "Creating responsive, pixel-perfect user interfaces with a strong focus on UX and performance.",
+      title: content.services.frontend.title,
+      description: content.services.frontend.description,
       icon: <FrontendIcon size="80px" color="#a8a8a8" />
     },
     {
-      title: "Backend & APIs",
-      description: "Developing robust server-side logic and secure RESTful APIs to power complex applications.",
+      title: content.services.backend.title,
+      description: content.services.backend.description,
       icon: <BackendIcon
         size="80px" color="#a8a8a8" />
     }
@@ -45,7 +48,7 @@ const Services = () => {
               </Card.Body>
             </Card>
             {index !== services.length - 1 && (
-                <div className={classes['dot']}></div>
+              <div className={classes['dot']}></div>
             )}
           </Col>
         ))}

@@ -4,47 +4,46 @@ import ecommerce from '../../assets/ecommerce2.png'
 import blog from '../../assets/threadblog.png'
 import classes from './Projects.module.css'
 import ExternalLinkIcon from '../../assets/ExternalLinkIcon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const Projects = () => {
+  const { content } = useLanguage()
 
-  const projectList = [
+  const technicalData = [
     {
-      title: "E-Commerce Platform",
-      description: "A professional online store featuring a dynamic catalog of 500 products across 50 categories. It includes advanced search by title, category-specific filtering, a persistent wishlist system, and full Stripe integration for secure payments. A dedicated admin dashboard allows for complete real-time product and inventory management.",
       tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
       image: ecommerce,
       github: "https://github.com/Alessandro01-dev/e-commerce",
       demo: null,
-      progressMessage: "Deployment in progress"
     },
     {
-      title: "Talkmate",
-      description: "Talkmate is a modern web platform connecting language students and tutors worldwide. By integrating Google Maps APIs, users can find native teachers or other users for a language exchange in their local area or specific cities, visualizing them on an interactive map.",
       tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Socket.io", "Google Maps API"],
       image: talkmate,
       github: "https://github.com/Alessandro01-dev/capstone_project",
       demo: "https://talkmate-flame.vercel.app"
     },
     {
-      title: "Thread Blog",
-      description: "A modern publishing platform designed for seamless storytelling. It features a rich-text editor, content categorization, and a personalized feed. The application focuses on clean typography and optimized reading experiences, including features like reading time estimation and social sharing integrations.",
       tech: ["React", "React Bootstrap", "Node.js", "Express", "MongoDB", "JWT", "OAuth"],
       image: blog,
       github: "https://github.com/Alessandro01-dev/epicode/tree/main/M6",
       demo: null,
-      progressMessage: "System Upgrade & Deployment in progress"
     }
   ];
 
+  const projects = content.projects.list.map((item, index) => ({
+    ...item,
+    ...technicalData[index]
+  }));
+
   return (
     <section id="projects" className="py-5">
-      <h2 className={`${classes['section-title']} text-center mb-5 fw-bold`}>Projects</h2>
+      <h2 className={`${classes['section-title']} text-center mb-5 fw-bold`}>{content.projects.sectionTitle}</h2>
       <div className={classes['title-divider']}>
         <div className={classes['line']}></div>
         <div className={classes['dot']}></div>
       </div>
       <Container>
-        {projectList.map((project, index) => (
+        {projects.map((project, index) => (
           <Row
             key={index}
             className={`mb-5 align-items-center ${index % 2 !== 0 ? 'flex-md-row-reverse' : ''}`}
@@ -84,7 +83,7 @@ const Projects = () => {
                     target="_blank"
                     className={classes['github-btn-custom']}
                   >
-                    View Github
+                    {content.projects.viewGithub}
                   </Button>
                 )}
                 {project.demo ? (
@@ -93,7 +92,7 @@ const Projects = () => {
                     target="_blank"
                     className={`${classes['view-project-btn']} d-inline-flex align-items-center gap-1`}
                   >
-                    View Project <sup><ExternalLinkIcon className="align-top" /></sup>
+                    {content.projects.viewProject} <sup><ExternalLinkIcon className="align-top" /></sup>
                   </a>
                 ) : (
                   <span className="text-info small fst-italic">

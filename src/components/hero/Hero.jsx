@@ -2,8 +2,11 @@ import { Col, Row } from 'react-bootstrap'
 import classes from './Hero.module.css'
 import hero from '../../assets/hero5.png'
 import Typewriter from 'typewriter-effect';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const Hero = () => {
+  const { content } = useLanguage();
+
   return (
     <Row
       className='align-items-center'
@@ -17,10 +20,10 @@ const Hero = () => {
         >
           <h1
             className={classes['greeting']}
-          >Hi There<span>!</span></h1>
+          >{content.hero.greeting}<span>!</span></h1>
           <div className={classes['intro-container']}>
             <div className={classes['accent-line']}></div>
-            <h1 className={classes['introduction']}>I'm Alessandro</h1>
+            <h1 className={classes['introduction']}>{content.hero.introduction}</h1>
           </div>
           <h1
             className={classes['job']}
@@ -45,7 +48,7 @@ const Hero = () => {
                 wrapperClassName: classes['typewriter-wrapper'],
                 cursorClassName: classes['typewriter-cursor'],
               }}
-            /> */} Web Developer <span>{`/>`}</span></h1>
+            /> */} {content.hero.job} <span>{`/>`}</span></h1>
         </div>
       </Col>
       <Col

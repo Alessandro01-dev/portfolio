@@ -3,8 +3,11 @@ import classes from './Footer.module.css'
 import GithubIcon from '../../assets/GithubIcon'
 import LinkedinIcon from '../../assets/LinkedinIcon'
 import SendEmailIcon from '../../assets/SendEmailIcon'
+import { useLanguage } from '../../contexts/LanguageContext'
 
 const Footer = () => {
+  const { content } = useLanguage();
+
   const email = "ale.aronica@outlook.it";
   const githubUrl = "https://github.com/Alessandro01-dev";
   const linkedinUrl = "https://www.linkedin.com/in/alessandro-aronica-9496b83a5";
@@ -29,7 +32,7 @@ const Footer = () => {
             <p
               className='m-0 text-center small text-secondary'
             >
-              © 2026. All rights reserved.
+              © {new Date().getFullYear()}. {content.footer.rights}
             </p>
           </Col>
         </Row>

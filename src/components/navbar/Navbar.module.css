@@ -30,3 +30,29 @@
   opacity: 1;
   color: #fff !important;
 }
+
+.lang-dropdown :global(.dropdown-toggle) {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0;
+  border: none;
+}
+
+.lang-dropdown :global(.dropdown-toggle::after) {
+  vertical-align: middle;
+}
+
+.lang-dropdown :global(.dropdown-menu) {
+  margin-top: 10px !important; 
+  min-width: 80px !important;
+}
+
+.lang-dropdown :global(.dropdown-item) {
+  font-size: 14px;
+}
+
+.lang-dropdown :global(.dropdown-item:active) {
+  background-color: var(--background-light) !important;
+  color: #fff !important;
+}
