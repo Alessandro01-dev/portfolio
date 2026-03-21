@@ -89,6 +89,7 @@ const Contact = () => {
                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                 theme="dark"
                 hl={language}
+                key={language}
               />
             </div>
           </div>
