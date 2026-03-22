@@ -40,7 +40,7 @@ export const translations = {
         {
           title: "E-Commerce Platform",
           description: "A professional online store featuring a dynamic catalog of 500 products across 50 categories. It includes advanced search by title, category-specific filtering, a persistent wishlist system, and full Stripe integration for secure payments. A dedicated admin dashboard allows for complete real-time product and inventory management.",
-          progressMessage: "Deployment in progress"
+          progressMessage: ""
         },
         {
           title: "Talkmate",

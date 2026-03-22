@@ -14,7 +14,7 @@ const Projects = () => {
       tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
       image: ecommerce,
       github: "https://github.com/Alessandro01-dev/e-commerce",
-      demo: null,
+      demo: "https://e-commerce-one-eta-33.vercel.app",
     },
     {
       tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Socket.io", "Google Maps API"],
