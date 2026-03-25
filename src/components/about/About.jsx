@@ -33,7 +33,7 @@ const About = () => {
               <div className="d-flex align-items-center gap-3 justify-content-center justify-content-md-start">
                 <Button
                   variant="outline-light"
-                  href={`${import.meta.env.BASE_URL}Alessandro_Aronica_CV_EN.pdf`}
+                  href={`${import.meta.env.BASE_URL}/Alessandro_Aronica_CV_EN.pdf`}
                   download="Alessandro_Aronica_CV_EN.pdf"
                   size="sm"
                 >
@@ -41,7 +41,7 @@ const About = () => {
                 </Button>
                 <Button
                   variant="outline-light"
-                  href={`${import.meta.env.BASE_URL}Alessandro_Aronica_CV_IT.pdf`}
+                  href={`${import.meta.env.BASE_URL}/Alessandro_Aronica_CV_IT.pdf`}
                   download="Alessandro_Aronica_CV_IT.pdf"
                   size="sm"
                 >
