@@ -26,14 +26,29 @@ const About = () => {
             <p className="text-secondary">
               {content.about.text2}
             </p>
-            <Button
-              variant="outline-light"
-              className="mt-auto align-self-center align-self-md-start"
-              href="Resume.pdf"
-              download="Alessandro_CV.pdf"
-            >
-              {content.about.downloadBtn}
-            </Button>
+            <div>
+              <p className="fw-bold mb-2 text-uppercase small">
+                {content.about.downloadLabel}
+              </p>
+              <div className="d-flex align-items-center gap-3 justify-content-center justify-content-md-start">
+                <Button
+                  variant="outline-light"
+                  href={`${import.meta.env.BASE_URL}Alessandro_Aronica_CV_EN.pdf`}
+                  download="Alessandro_Aronica_CV_EN.pdf"
+                  size="sm"
+                >
+                  {content.about.cvEnBtn}
+                </Button>
+                <Button
+                  variant="outline-light"
+                  href={`${import.meta.env.BASE_URL}Alessandro_Aronica_CV_IT.pdf`}
+                  download="Alessandro_Aronica_CV_IT.pdf"
+                  size="sm"
+                >
+                  {content.about.cvItBtn}
+                </Button>
+              </div>
+            </div>
           </div>
         </Col>
       </Row>

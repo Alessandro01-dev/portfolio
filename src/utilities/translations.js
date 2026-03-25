@@ -16,7 +16,9 @@ export const translations = {
       intro: "Full-Stack Developer dedicated to building scalable and intuitive digital products.",
       text1: "I specialize in turning complex problems into elegant, digital solutions. With a background in the JavaScript ecosystem, I focus on writing clean, maintainable code and delivering seamless user experiences.",
       text2: "I genuinely enjoy exploring the ever-evolving JavaScript ecosystem. I stay curious by testing new libraries and finding better ways to build things, always looking for more efficient tools and cleaner patterns to improve the overall quality of my work.",
-      downloadBtn: "Download CV"
+      downloadLabel: "Download CV",
+      cvEnBtn: "English Version",
+      cvItBtn: "Italian Version"
     },
     services: {
       webDev: {
@@ -97,8 +99,9 @@ export const translations = {
       intro: "Sviluppatore Full-Stack dedicato alla creazione di prodotti digitali scalabili e intuitivi.",
       text1: "Mi specializzo nel trasformare problemi complessi in eleganti soluzioni digitali. Con una solida esperienza nell'ecosistema JavaScript, mi dedico alla scrittura di codice pulito e manutenibile per offrire un'esperienza utente fluida e intuitiva.",
       text2: "Amo esplorare l'ecosistema JavaScript, in continua evoluzione. Alimento la mia curiosità testando nuove librerie e cercando costantemente modi migliori per costruire prodotti, alla ricerca di strumenti più efficienti e pattern più puliti per elevare la qualità del mio lavoro.",
-
-      downloadBtn: "Scarica CV"
+      downloadLabel: "Scarica il CV",
+      cvEnBtn: "Versione Inglese",
+      cvItBtn: "Versione Italiana"
     },
     services: {
       webDev: {
