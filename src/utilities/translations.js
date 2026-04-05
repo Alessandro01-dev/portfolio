@@ -51,7 +51,7 @@ export const translations = {
         },
         {
           title: "Thread Blog",
-          description: "A modern publishing platform designed for seamless storytelling. It features a rich-text editor, content categorization, and an interactive community where users can share articles and engage through comments. The application focuses on clean typography and optimized reading experiences, including automated reading time estimation.",
+          description: "A modern publishing platform designed for seamless storytelling. It features a rich-text editor, content categorization, and an interactive community where users can share articles and engage through comments. The application focuses on clean typography and optimized reading experiences, including reading time information.",
           progressMessage: ""
         }
       ]
@@ -134,7 +134,7 @@ export const translations = {
         },
         {
           title: "Thread Blog",
-          description: "Una moderna piattaforma di publishing progettata per lo storytelling. Dispone di un editor rich-text, categorizzazione dei contenuti e una community interattiva dove gli utenti possono condividere articoli e interagire tramite commenti. L'applicazione si focalizza su una tipografia pulita e un'esperienza di lettura ottimizzata, con stima automatica dei tempi di lettura.",
+          description: "Una moderna piattaforma di publishing progettata per lo storytelling. Dispone di un editor rich-text, categorizzazione dei contenuti e una community interattiva dove gli utenti possono condividere articoli e interagire tramite commenti. L'applicazione si focalizza su una tipografia pulita e un'esperienza di lettura ottimizzata, con indicazione dei tempi di lettura.",
           progressMessage: ""
         }
       ]
