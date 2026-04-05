@@ -23,10 +23,10 @@ const Projects = () => {
       demo: "https://talkmate-flame.vercel.app"
     },
     {
-      tech: ["React", "React Bootstrap", "Node.js", "Express", "MongoDB", "JWT", "OAuth"],
+      tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "OAuth 2.0", "Cloudinary", "Passport.js"],
       image: blog,
-      github: "https://github.com/Alessandro01-dev/epicode/tree/main/M6",
-      demo: null,
+      github: "https://github.com/Alessandro01-dev/thread_blog",
+      demo: "https://threadblog.vercel.app",
     }
   ];
 
