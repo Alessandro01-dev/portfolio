@@ -18,7 +18,7 @@ const TechStack = () => {
     { name: 'MongoDB', icon: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1-1.svg' },
     { name: 'Socket.io', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg' },
     { name: 'Github', icon: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png' },
-    { name: 'React Router', icon: 'https://reactrouter.com/_brand/React%20Router%20Brand%20Assets/React%20Router%20Logo/Light.svg' }
+    { name: 'React Router', icon: 'https://www.svgrepo.com/show/354262/react-router.svg' }
   ];
 
   return (
