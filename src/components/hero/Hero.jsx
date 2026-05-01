@@ -25,22 +25,20 @@ const Hero = () => {
             <div className={classes['accent-line']}></div>
             <h1 className={classes['introduction']}>{content.hero.introduction}</h1>
           </div>
-          <h1
-            className={classes['job']}
-          ><span>{`<`}</span> {/* <Typewriter
+          <h1 className={classes['job']}>
+            <span>{`<`}</span>
+            {/* 
+            <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .typeString('Problem Solver')
-                  .pauseFor(1500)
+                  .typeString('Full Stack Developer')
+                  .pauseFor(2000)
                   .deleteAll()
-                  .typeString('Bug Creator')
-                  .pauseFor(500)
-                  .deleteChars(7)
-                  .typeString('Fixer')
-                  .pauseFor(2500)
+                  .typeString('UX Designer')
+                  .pauseFor(2000)
                   .deleteAll()
                   .typeString('Web Developer')
-                  .start()
+                  .start();
               }}
               options={{
                 autoStart: true,
@@ -48,7 +46,11 @@ const Hero = () => {
                 wrapperClassName: classes['typewriter-wrapper'],
                 cursorClassName: classes['typewriter-cursor'],
               }}
-            /> */} {content.hero.job} <span>{`/>`}</span></h1>
+            />
+             */}
+            {content.hero.job}
+            <span>{`/>`}</span>
+          </h1>
         </div>
       </Col>
       <Col
