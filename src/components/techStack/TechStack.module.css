@@ -14,6 +14,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  -webkit-mask-image: linear-gradient(to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent);
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent);
+
 }
 
 .slide-img-container {
