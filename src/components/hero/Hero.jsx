@@ -1,6 +1,6 @@
 import { Col, Row } from 'react-bootstrap'
 import classes from './Hero.module.css'
-import hero from '../../assets/hero5.png'
+import hero from '../../assets/hero.png'
 import Typewriter from 'typewriter-effect';
 import { useLanguage } from '../../contexts/LanguageContext';
 

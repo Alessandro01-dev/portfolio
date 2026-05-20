@@ -1,58 +1,45 @@
-import { Col, Container, Row } from 'react-bootstrap';
-import './App.css'
-import Hero from './components/hero/Hero'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import TechStack from './components/techStack/TechStack';
-import Services from './components/services/Services'
-import About from './components/about/About'
-import Projects from './components/projects/Projects';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
-import Navbar from './components/navbar/Navbar';
-import { useEffect } from 'react';
+import { Col, Container, Row } from "react-bootstrap";
+import "./App.css";
+import Hero from "./components/hero/Hero";
+import "bootstrap/dist/css/bootstrap.min.css";
+import TechStack from "./components/techStack/TechStack";
+import Services from "./components/services/Services";
+import About from "./components/about/About";
+import Projects from "./components/projects/Projects";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
+import { useEffect } from "react";
 import ReactGA from "react-ga4";
+import SpotlightEffect from "./components/spotlightEffect/SpotlightEffect";
 
 ReactGA.initialize(import.meta.env.VITE_GA_ID);
 
 const App = () => {
-
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
 
   return (
     <>
+      {/* <SpotlightEffect /> */}
 
       <Navbar />
 
       <Container>
-        <Row
-          className='align-items-center'
-        >
-          <Col
-            xs={12}
-            lg={10}
-            className='mx-auto'
-          >
+        <Row className="align-items-center">
+          <Col xs={12} lg={10} className="mx-auto">
             <Hero />
           </Col>
         </Row>
       </Container>
       <TechStack />
       <Container>
-        <Row
-          className="align-items-stretch"
-        >
-          <Col
-            xs={12}
-            lg={6}
-          >
+        <Row className="align-items-stretch">
+          <Col xs={12} lg={6}>
             <Services />
           </Col>
-          <Col
-            xs={12}
-            lg={6}
-          >
+          <Col xs={12} lg={6}>
             <About />
           </Col>
         </Row>
@@ -65,21 +52,15 @@ const App = () => {
         </Row>
       </Container>
       <Container>
-        <Row
-          className='align-items-center'
-        >
-          <Col
-            xs={12}
-            lg={10}
-            className='mx-auto'
-          >
+        <Row className="align-items-center">
+          <Col xs={12} lg={10} className="mx-auto">
             <Contact />
           </Col>
         </Row>
       </Container>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
