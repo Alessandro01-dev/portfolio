@@ -8,9 +8,9 @@ const Hero = () => {
   const { content } = useLanguage();
 
   return (
-    <Row className="align-items-center">
+    <Row className={`${classes["main-container"]} align-items-center`}>
       <Col xs={12} md={6}>
-        <div className={classes["hero-main-container"]}>
+        <div className={classes["left-container"]}>
           <h1 className={classes["greeting"]}>
             {content.hero.greeting}
             <span>!</span>
@@ -23,28 +23,30 @@ const Hero = () => {
           </div>
           <h1 className={classes["job"]}>
             <span>{`<`}</span>
-            {/* 
             <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString('Full Stack Developer')
-                  .pauseFor(2000)
-                  .deleteAll()
-                  .typeString('UX Designer')
-                  .pauseFor(2000)
-                  .deleteAll()
-                  .typeString('Web Developer')
-                  .start();
-              }}
               options={{
                 autoStart: true,
                 loop: false,
-                wrapperClassName: classes['typewriter-wrapper'],
-                cursorClassName: classes['typewriter-cursor'],
+                delay: 60,
+                deleteSpeed: 1,
+                wrapperClassName: classes["typewriter-wrapper"],
+                cursorClassName: classes["typewriter-cursor"],
+              }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Web Developer")
+                  .pauseFor(1200)
+                  .deleteAll()
+                  .typeString("Java Developer")
+                  .pauseFor(1200)
+                  .deleteAll()
+                  .typeString("React Developer")
+                  .pauseFor(1200)
+                  .deleteAll()
+                  .typeString("Full Stack Developer")
+                  .start();
               }}
             />
-             */}
-            {content.hero.job}
             <span>{`/>`}</span>
           </h1>
         </div>
