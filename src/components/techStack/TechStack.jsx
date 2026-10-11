@@ -15,6 +15,7 @@ const TechStack = () => {
           spaceBetween={50}
           slidesPerView={3}
           loop={true}
+          centeredSlides={true}
           speed={3000}
           autoplay={{
             delay: 0,
