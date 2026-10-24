@@ -1,27 +1,27 @@
-import { Col, Row } from "react-bootstrap";
-import classes from "./Hero.module.css";
-import hero from "../../assets/hero.png";
-import Typewriter from "typewriter-effect";
-import { useLanguage } from "../../contexts/LanguageContext";
+import { Col, Row } from 'react-bootstrap'
+import classes from './Hero.module.css'
+import hero from '../../assets/hero.png'
+import Typewriter from 'typewriter-effect'
+import { useLanguage } from '../../contexts/LanguageContext'
 
 const Hero = () => {
-  const { content } = useLanguage();
+  const { content } = useLanguage()
 
   return (
-    <Row className={`${classes["main-container"]} align-items-center`}>
+    <Row className={`${classes['main-container']} align-items-center`}>
       <Col xs={12} md={6}>
-        <div className={classes["left-container"]}>
-          <h1 className={classes["greeting"]}>
+        <div className={classes['left-container']}>
+          <h1 className={classes['greeting']}>
             {content.hero.greeting}
             <span>!</span>
           </h1>
-          <div className={classes["intro-container"]}>
-            <div className={classes["accent-line"]}></div>
-            <h1 className={classes["introduction"]}>
+          <div className={classes['intro-container']}>
+            <div className={classes['accent-line']}></div>
+            <h1 className={classes['introduction']}>
               {content.hero.introduction}
             </h1>
           </div>
-          <h1 className={classes["job"]}>
+          <h1 className={classes['job']}>
             <span>{`<`}</span>
             <Typewriter
               options={{
@@ -29,22 +29,22 @@ const Hero = () => {
                 loop: false,
                 delay: 60,
                 deleteSpeed: 1,
-                wrapperClassName: classes["typewriter-wrapper"],
-                cursorClassName: classes["typewriter-cursor"],
+                wrapperClassName: classes['typewriter-wrapper'],
+                cursorClassName: classes['typewriter-cursor'],
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("Web Developer")
-                  .pauseFor(1200)
+                  .typeString('Java Backend Developer')
+                  .pauseFor(1500)
                   .deleteAll()
-                  .typeString("Java Developer")
-                  .pauseFor(1200)
+                  .typeString('Frontend & Mobile Developer')
+                  .pauseFor(1500)
                   .deleteAll()
-                  .typeString("React Developer")
-                  .pauseFor(1200)
+                  .typeString('DevOps & Cloud Developer')
+                  .pauseFor(1500)
                   .deleteAll()
-                  .typeString("Full Stack Developer")
-                  .start();
+                  .typeString('Full Stack Developer')
+                  .start()
               }}
             />
             <span>{`/>`}</span>
@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
       </Col>
       <Col xs={12} md={6}>
-        <div className={classes["hero-img-container"]}>
+        <div className={classes['hero-img-container']}>
           <img
             className="w-100 object-fit-cover d-block"
             src={hero}
@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
       </Col>
     </Row>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
